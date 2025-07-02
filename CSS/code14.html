@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+        }
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap:20px;
+            /* text-align: center; */
+          justify-content: center;
+        }
+        .card{
+           font-family: "Roboto", sans-serif;
+            width: 300px;
+            /* height: 300px; */
+             background-color: rgba(58, 59, 59, 0.267);
+             text-align: center;
+             color:white;
+             font-size: 13px;
+             padding: 10px;
+             border: 1px solid rgb(97, 95, 95);
+             border-radius: 20px;
+             position: relative;
+            /* box-shadow: inset 1px 1px 10px 10px white; */
+
+        }
+        .card img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+        }
+        p{
+            padding: 10px;
+            line-height: 1.7;
+        }
+        h1{
+            padding-top: 10px;
+        }
+
+        .card:hover{
+            box-shadow: 2px 2px 40px 1px rgba(255, 255, 255, 0.308);
+
+        }
+
+        .ball{
+            height: 80px;
+            width: 80px;
+            background-color: bisque;
+            border-radius: 50%;
+            filter: blur(60px);
+            position: absolute;
+            left: 35%;
+            top: 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <div class="card">
+            <img src="https://ganeshdutt.netlify.app/developer2.png" alt="">
+          
+            <h1>Web <br> Development</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quam quaerat vel pariatur! Repellat exercitationem perferendis expedita vel alias voluptate sint nostrum, suscipit odit eum id amet, eos in assumenda.</p>
+            <!-- <a href="#">Read More...</a> -->
+        <div class="ball"></div>
+
+        </div>
+
+
+         <div class="card">
+            <img src="https://ganeshdutt.netlify.app/developer3.webp" alt="">
+          
+            <h1>Web <br> Development</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quam quaerat vel pariatur! Repellat exercitationem perferendis expedita vel alias voluptate sint nostrum, suscipit odit eum id amet, eos in assumenda.</p>
+            <!-- <a href="#">Read More...</a> -->
+        <div class="ball"></div>
+
+        </div>
+
+
+         <div class="card">
+            <img src="https://ganeshdutt.netlify.app/developer.webp" alt="">
+          
+            <h1>Web <br> Development</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quam quaerat vel pariatur! Repellat exercitationem perferendis expedita vel alias voluptate sint nostrum, suscipit odit eum id amet, eos in assumenda.</p>
+            <!-- <a href="#">Read More...</a> -->
+        <div class="ball"></div>
+
+        </div>
+    </div>
+</body>
+</html>
