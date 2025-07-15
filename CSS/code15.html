@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background: black;
+            color:white;
+            padding: 20px;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+         .bar{
+                display: none;
+            }
+
+
+            .heroSection{
+                display: flex;
+                gap: 20px;
+                margin: 20px;
+            }
+            .heroSection img{
+                width:300px;
+            }
+        /* phone view */
+        @media only screen and (max-width:500px) {
+            ul{
+                display: none;
+            }
+            .bar{
+                display: block;
+            }
+               .heroSection{
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+
+            }
+        }
+
+        @media only screen and (max-width:700px) {
+           
+               .heroSection{
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LOGO</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+
+        <div class="bar" style="rotate: 90deg; font-size: 30px;">
+            ⏸️
+        </div>
+    </nav>
+
+    <div class="heroSection">
+        <img src="../images/pic1.jpg" alt="">
+        <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quia, aliquid exercitationem deserunt, nobis eaque consequatur quibusdam accusantium recusandae atque magni maiores necessitatibus cupiditate, reiciendis soluta nostrum nemo minus minima?</p>
+        <button>click me </button>
+        </div>
+
+    </div>
+</body>
+</html>
