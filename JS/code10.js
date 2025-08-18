@@ -42,12 +42,12 @@ console.log("Hello World");
 // arr[4]= arr[5]
 
 // Find the length of an array.
-let arr = [12,45,67,87,65,34]
-let count = 0
-while(arr[count] !== undefined){
-    count++;
-}
-console.log(count);
+// let arr = [12,45,67,87,65,34]
+// let count = 0
+// while(arr[count] !== undefined){
+//     count++;
+// }
+// console.log(count);
 // console.log(arr.length);
 
 
