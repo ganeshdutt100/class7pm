@@ -9,3 +9,8 @@ for(let x in person){
     console.log(x  , " :  ", person[x]);
     
 }
+[
+    {},
+    {},
+    {}
+]

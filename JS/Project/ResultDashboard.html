@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #idname{} */
+    </style>
+</head>
+<body>
+    <h2>Student Result Dashboard</h2>
+
+    <button  onclick="showNames()">Show All Names</button>
+    <button onclick="showPassed()">Show Passed Students</button>
+    <button onclick="showTopper()">Find Topper</button>
+    <button onclick="showAverage()">Show Average Marks</button>
+
+    <br>
+    <br>
+    <input type="text"  id="searchInput" placeholder="Search by Name">
+    <button onclick="searchStudents()">Search </button>
+    <div class="result" id="output"></div>
+
+
+    <script>
+        const students =[ 
+            {name:"Aman" , marks : 70, age :20},
+            {name:"Sonu" , marks : 80, age :21},
+            {name:"Vanshdeep" , marks : 90, age :23},
+            {name:"Shofik" , marks : 95, age :24},
+            {name:"Priya" , marks : 70, age :26},
+            {name:"Bhumika" , marks : 99, age :23},
+        ];
+
+        const output =  document.getElementById('output');
+
+   function showNames(){
+    const names  = students.map( s =>s.name);
+        output.innerHTML=" <b> All Students </b>" +names.join(" , ") 
+
+   }
+   function showPassed(){
+    const passed  = students.filter( s =>s.marks>=60);
+        output.innerHTML=" <b> Passed Students </b>" +passed.map(s => s.name).join( " , ") 
+
+   }
+   function showTopper(){
+    const topper  = students.reduce( (prev , curr) => prev.marks> curr.marks? prev : curr );
+        output.innerHTML= `<b>Topper</b> ${topper.name} (${topper.marks} marks)` 
+
+   }
+   function showAverage(){
+    const average  = students.reduce( (sum , s) => sum + s.marks,0)/students.length;
+        output.innerHTML= `<b>Average</b> ${average}` 
+
+   }
+
+   function searchStudents(){
+    const name =  document.getElementById('searchInput').value.trim();
+
+    const student = students.find(s => s.name.toLocaleLowerCase() === name.toLocaleLowerCase());
+    if(student){
+        output.innerHTML = `<b>Found </b> ${student.name} , marks : ${student.marks} , age : ${student.age}`
+    }else{
+        output.innerHTML = "<b> No Student Found </b>"
+    }
+    
+   }
+
+        
+    </script>
+</body>
+</html>
