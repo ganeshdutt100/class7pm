@@ -6,12 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="para">loading...</p>
+    <!-- <p class="para">loading...</p>
+    <p class="para">loading...</p>-->
+    <p class="para">loading...</p> 
+    <button class="btn" >Click me </button>
     <script>
         // DOM
-   let para =   document.getElementById("para")
-   para.innerHTML= "Hey i am para1"
-   para.style.color="red";
+//    let para =   document.getElementById("para")
+//    let para =   document.getElementsByClassName("para")
+//    let para =   document.getElementsByTagName("p")
+//    let para =   document.querySelector(".para")
+//    let para =   document.querySelectorAll(".para")
+
+//    for(let  i=0; i <para.length; i++ ){
+//     para[i].innerHTML = "Hey I am Para"
+//    }
+//    para.innerHTML= "Hey i am para1"
+//    para.style.color="red";
+
+// function fun(){
+// document.querySelector(".para").innerHTML = "I am para 1"
+// }
+
+ document.querySelector('.btn').addEventListener("click", ()=>{
+    document.querySelector(".para").innerHTML = "I am para 1"
+ })
+
+
+
     </script>
 </body>
 </html>
