@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your task here..." class="input">
+    <button class="btn" onclick="fun()">Click me </button>
+    <ul class="container">
+        
+    </ul>
+
+    <script>
+      
+        
+        function fun(){
+        let input  =  document.querySelector('.input');
+        let newTask = input.value.trim(); 
+
+        if(newTask ==  ""){
+            alert("Please Enter your task")
+            return
+        }
+
+        let container  =  document.querySelector('.container');
+        let list = document.createElement("li")
+        list.innerHTML = `${newTask} <button onclick="deleteTask(this)"> Delete </button>`;
+
+
+
+        container.appendChild(list);
+
+        input.value = ""
+
+        }
+        function deleteTask(button){
+            button.parentElement.remove();         
+        }
+    </script>
+</body>
+</html>
