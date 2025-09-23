@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise.all()
+        // It takes an array of promises as input and returns a single promise.
+        // The returned promise resolves when all of the input promises have resolved, 
+        // and rejects if any of the input promises reject.
+        // The resolved value of the Promise.all() is an array of the resolved values of the input promises, 
+        // in the same order as the input promises.
+        // If any of the input promises reject, the Promise.all() promise will reject with the reason of the first rejected promise.
+        // If the input array is empty, the Promise.all() promise will resolve immediately.
+        // Promise.all() is useful when you want to wait for multiple promises to resolve before continuing with the rest of your code.
+        // For example, if you have a list of URLs that you want to fetch data from, you can use Promise.all() to wait for all of the requests to complete before processing the data.
+        // Promise.all() is a powerful tool for working with asynchronous code in JavaScript.
+        // It allows you to write more concise and readable code by eliminating the need for nested callbacks and complex error handling.
+
+        // Promise.all([task1, task2, task3])
+
+        // If any of the input promises reject, the Promise.all() promise will reject with the reason of the first rejected promise.
+        // If the input array is empty, the Promise.all() promise will resolve immediately.
+        // const task1 = Promise.resolve("Task 1  Completed ")
+        // const task2 = Promise.resolve("Task 2  Completed ")
+        // const task3 = Promise.resolve("Task 3  Completed ")
+
+        // Promise.all([task1, task2, task3])
+        //   .then( result => console.log(result)
+        //   ).catch( error => console.log(error)
+        //   )
+
+     
+        //  Promise.race([])
+        // Promise.race() takes an array of promises as input and returns a single promise.
+        // The returned promise settles (resolves or rejects) as soon as one of the input promises settles.
+        // If the first promise to settle is resolved, the Promise.race() promise will resolve with the value of that promise.
+        // If the first promise to settle is rejected, the Promise.race() promise will reject with the reason of that promise.
+        // Promise.race() is useful when you want to wait for the first of multiple promises to settle.
+        // For example, if you have a list of URLs that you want to fetch data from, you can use Promise.race() to wait for the first request to complete before processing the data.
+        // Promise.race() is a powerful tool for working with asynchronous code in JavaScript.
+        // It allows you to write more concise and readable code by eliminating the need for nested callbacks and complex error handling.
+
+        // const task1 = Promise.resolve("Task 1  Completed ")
+        // const task2 = Promise.reject("Task 2  error ")
+        // const task3 = Promise.resolve("Task 3  Completed ")
+
+        // Promise.race([task2, task1, task3])
+        //   .then( result => console.log(result)
+        //   ).catch( error => console.log(error)
+        //   )
+
+
+// Promise.any()
+        // Promise.any() takes an array of promises as input and returns a single promise.
+        // The returned promise settles (resolves or rejects) as soon as one of the input promises settles.
+        // If the first promise to settle is resolved, the Promise.any() promise will resolve with the value of that promise.
+        // If all of the input promises reject, the Promise.any() promise will reject with an AggregateError, 
+        // which is a special type of error that contains an array of the reasons for the rejections.
+        // Promise.any() is useful when you want to wait for the first of multiple promises to settle.
+        // For example, if you have a list of URLs that you want to fetch data from, you can use Promise.any() to wait for the first request to complete before processing the data.
+        // Promise.any() is a powerful tool for working with asynchronous code in JavaScript.
+        // It allows you to write more concise and readable code by eliminating the need for nested callbacks and complex error handling.
+
+        // const task1 = Promise.reject("Task 1  error ")
+        // const task2 = Promise.resolve("Task 2  completed ")
+        // const task3 = Promise.resolve("Task 3  complete ")
+
+        // Promise.any([task1, task2, task3])
+        //   .then( result => console.log(result)
+        //   ).catch( error => console.log(error)
+        //   )
+
+    </script>
+</body>
+</html>
